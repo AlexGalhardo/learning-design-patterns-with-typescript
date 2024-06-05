@@ -1,17 +1,38 @@
 {
-  "name": "learning-design-patterns-with-typescript",
-  "scripts": {
-    "singleton": "bun --watch src/Singleton/Conceptual/index.ts",
-    "format": "prettier --write \"src/**/*.ts\""
-  },
-  "dependencies": {
-    "husky": "^9.0.11",
-    "prettier": "^3.2.5"
-  },
-  "devDependencies": {
-    "@types/bun": "^1.1.3",
-    "@types/node": "^20.14.2",
-    "bun-types": "latest",
-    "typescript": "^5.4.5"
-  }
+	"name": "learning-design-patterns-with-typescript",
+	"scripts": {
+		"singleton": "bun --watch src/Singleton/Conceptual/index.ts",
+		"adapter": "bun --watch src/Adapter/Conceptual/index.ts",
+		"abstract-factory": "bun --watch src/AbstractFactory/Conceptual/index.ts",
+		"bridge": "bun --watch src/Bridge/Conceptual/index.ts",
+		"builder": "bun --watch src/Builder/Conceptual/index.ts",
+		"chain-of-responsability": "bun --watch src/ChainOfResponsibility/Conceptual/index.ts",
+		"command": "bun --watch src/Command/Conceptual/index.ts",
+		"composite": "bun --watch src/Composite/Conceptual/index.ts",
+		"decorator": "bun --watch src/Decorator/Conceptual/index.ts",
+		"facade": "bun --watch src/Facade/Conceptual/index.ts",
+		"factory-method": "bun --watch src/FactoryMethod/Conceptual/index.ts",
+		"flyweight": "bun --watch src/Flyweight/Conceptual/index.ts",
+		"iterator": "bun --watch src/Iterator/Conceptual/index.ts",
+		"mediator": "bun --watch src/Mediator/Conceptual/index.ts",
+		"memento": "bun --watch src/Memento/Conceptual/index.ts",
+		"observer": "bun --watch src/Observer/Conceptual/index.ts",
+		"prototype": "bun --watch src/Prototype/Conceptual/index.ts",
+		"proxy": "bun --watch src/Proxy/Conceptual/index.ts",
+		"state": "bun --watch src/State/Conceptual/index.ts",
+		"strategy": "bun --watch src/Strategy/Conceptual/index.ts",
+		"template-method": "bun --watch src/TemplateMethod/Conceptual/index.ts",
+		"visitor": "bun --watch src/Visitor/Conceptual/index.ts",
+		"format": "prettier --write \"src/**/*.ts\""
+	},
+	"dependencies": {
+		"husky": "^9.0.11",
+		"prettier": "^3.3.1"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.1.3",
+		"@types/node": "^20.14.2",
+		"bun-types": "latest",
+		"typescript": "^5.4.5"
+	}
 }
