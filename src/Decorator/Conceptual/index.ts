@@ -10,7 +10,7 @@
  * decorators.
  */
 interface Component {
-	operation(): string;
+    operation(): string;
 }
 
 /**
@@ -18,9 +18,9 @@ interface Component {
  * There might be several variations of these classes.
  */
 class ConcreteComponent implements Component {
-	public operation(): string {
-		return "ConcreteComponent";
-	}
+    public operation(): string {
+        return "ConcreteComponent";
+    }
 }
 
 /**
@@ -31,18 +31,18 @@ class ConcreteComponent implements Component {
  * means to initialize it.
  */
 class Decorator implements Component {
-	protected component: Component;
+    protected component: Component;
 
-	constructor(component: Component) {
-		this.component = component;
-	}
+    constructor(component: Component) {
+        this.component = component;
+    }
 
-	/**
-	 * EN: The Decorator delegates all work to the wrapped component.
-	 */
-	public operation(): string {
-		return this.component.operation();
-	}
+    /**
+     * EN: The Decorator delegates all work to the wrapped component.
+     */
+    public operation(): string {
+        return this.component.operation();
+    }
 }
 
 /**
@@ -50,14 +50,14 @@ class Decorator implements Component {
  * way.
  */
 class ConcreteDecoratorA extends Decorator {
-	/**
-	 * EN: Decorators may call parent implementation of the operation, instead
-	 * of calling the wrapped object directly. This approach simplifies
-	 * extension of decorator classes.
-	 */
-	public operation(): string {
-		return `ConcreteDecoratorA(${super.operation()})`;
-	}
+    /**
+     * EN: Decorators may call parent implementation of the operation, instead
+     * of calling the wrapped object directly. This approach simplifies
+     * extension of decorator classes.
+     */
+    public operation(): string {
+        return `ConcreteDecoratorA(${super.operation()})`;
+    }
 }
 
 /**
@@ -65,9 +65,9 @@ class ConcreteDecoratorA extends Decorator {
  * a wrapped object.
  */
 class ConcreteDecoratorB extends Decorator {
-	public operation(): string {
-		return `ConcreteDecoratorB(${super.operation()})`;
-	}
+    public operation(): string {
+        return `ConcreteDecoratorB(${super.operation()})`;
+    }
 }
 
 /**
@@ -76,11 +76,11 @@ class ConcreteDecoratorB extends Decorator {
  * works with.
  */
 function clientCode(component: Component) {
-	// ...
+    // ...
 
-	console.log(`RESULT: ${component.operation()}`);
+    console.log(`RESULT: ${component.operation()}`);
 
-	// ...
+    // ...
 }
 
 /**
@@ -102,4 +102,4 @@ const decorator2 = new ConcreteDecoratorB(decorator1);
 console.log("Client: Now I've got a decorated component:");
 clientCode(decorator2);
 
-process.exit()
+process.exit();

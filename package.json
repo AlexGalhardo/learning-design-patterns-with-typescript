@@ -23,7 +23,8 @@
 		"strategy": "bun --watch src/Strategy/Conceptual/index.ts",
 		"template-method": "bun --watch src/TemplateMethod/Conceptual/index.ts",
 		"visitor": "bun --watch src/Visitor/Conceptual/index.ts",
-		"format": "prettier --write \"src/**/*.ts\""
+		"format": "prettier --write \"src/**/*.ts\"",
+		"prepare": "husky install"
 	},
 	"dependencies": {
 		"husky": "^9.0.11",

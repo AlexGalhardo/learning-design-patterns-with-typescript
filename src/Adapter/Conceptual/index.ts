@@ -5,9 +5,9 @@
  * interfaces to collaborate.
  */
 class Target {
-	public request(): string {
-		return "Target: The default target's behavior.";
-	}
+    public request(): string {
+        return "Target: The default target's behavior.";
+    }
 }
 
 /**
@@ -16,9 +16,9 @@ class Target {
  * before the client code can use it.
  */
 class Adaptee {
-	public specificRequest(): string {
-		return ".eetpadA eht fo roivaheb laicepS";
-	}
+    public specificRequest(): string {
+        return ".eetpadA eht fo roivaheb laicepS";
+    }
 }
 
 /**
@@ -26,24 +26,24 @@ class Adaptee {
  * interface.
  */
 class Adapter extends Target {
-	private adaptee: Adaptee;
+    private adaptee: Adaptee;
 
-	constructor(adaptee: Adaptee) {
-		super();
-		this.adaptee = adaptee;
-	}
+    constructor(adaptee: Adaptee) {
+        super();
+        this.adaptee = adaptee;
+    }
 
-	public request(): string {
-		const result = this.adaptee.specificRequest().split("").reverse().join("");
-		return `Adapter: (TRANSLATED) ${result}`;
-	}
+    public request(): string {
+        const result = this.adaptee.specificRequest().split("").reverse().join("");
+        return `Adapter: (TRANSLATED) ${result}`;
+    }
 }
 
 /**
  * EN: The client code supports all classes that follow the Target interface.
  */
 function clientCode(target: Target) {
-	console.log(target.request());
+    console.log(target.request());
 }
 
 console.log("Client: I can work just fine with the Target objects:");

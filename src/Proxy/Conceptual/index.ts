@@ -11,7 +11,7 @@
  * you'll be able to pass it a proxy instead of a real subject.
  */
 interface Subject {
-	request(): void;
+    request(): void;
 }
 
 /**
@@ -21,75 +21,75 @@ interface Subject {
  * without any changes to the RealSubject's code.
  */
 class RealSubject implements Subject {
-	attach(observer: Observer): void {
-		throw new Error("Method not implemented.");
-	}
-	detach(observer: Observer): void {
-		throw new Error("Method not implemented.");
-	}
-	notify(): void {
-		throw new Error("Method not implemented.");
-	}
-	public request(): void {
-		console.log("RealSubject: Handling request.");
-	}
+    attach(observer: Observer): void {
+        throw new Error("Method not implemented.");
+    }
+    detach(observer: Observer): void {
+        throw new Error("Method not implemented.");
+    }
+    notify(): void {
+        throw new Error("Method not implemented.");
+    }
+    public request(): void {
+        console.log("RealSubject: Handling request.");
+    }
 }
 
 /**
  * EN: The Proxy has an interface identical to the RealSubject.
  */
 class Proxy implements Subject {
-	private realSubject: RealSubject;
+    private realSubject: RealSubject;
 
-	/**
-	 * EN: The Proxy maintains a reference to an object of the RealSubject
-	 * class. It can be either lazy-loaded or passed to the Proxy by the client.
-	 */
-	constructor(realSubject: RealSubject) {
-		this.realSubject = realSubject;
-	}
-	attach(observer: Observer): void {
-		throw new Error("Method not implemented.");
-	}
-	detach(observer: Observer): void {
-		throw new Error("Method not implemented.");
-	}
-	notify(): void {
-		throw new Error("Method not implemented.");
-	}
-	attach(observer: Observer): void {
-		throw new Error("Method not implemented.");
-	}
-	detach(observer: Observer): void {
-		throw new Error("Method not implemented.");
-	}
-	notify(): void {
-		throw new Error("Method not implemented.");
-	}
+    /**
+     * EN: The Proxy maintains a reference to an object of the RealSubject
+     * class. It can be either lazy-loaded or passed to the Proxy by the client.
+     */
+    constructor(realSubject: RealSubject) {
+        this.realSubject = realSubject;
+    }
+    attach(observer: Observer): void {
+        throw new Error("Method not implemented.");
+    }
+    detach(observer: Observer): void {
+        throw new Error("Method not implemented.");
+    }
+    notify(): void {
+        throw new Error("Method not implemented.");
+    }
+    attach(observer: Observer): void {
+        throw new Error("Method not implemented.");
+    }
+    detach(observer: Observer): void {
+        throw new Error("Method not implemented.");
+    }
+    notify(): void {
+        throw new Error("Method not implemented.");
+    }
 
-	/**
-	 * EN: The most common applications of the Proxy pattern are lazy loading,
-	 * caching, controlling the access, logging, etc. A Proxy can perform one of
-	 * these things and then, depending on the result, pass the execution to the
-	 * same method in a linked RealSubject object.
-	 */
-	public request(): void {
-		if (this.checkAccess()) {
-			this.realSubject.request();
-			this.logAccess();
-		}
-	}
+    /**
+     * EN: The most common applications of the Proxy pattern are lazy loading,
+     * caching, controlling the access, logging, etc. A Proxy can perform one of
+     * these things and then, depending on the result, pass the execution to the
+     * same method in a linked RealSubject object.
+     */
+    public request(): void {
+        if (this.checkAccess()) {
+            this.realSubject.request();
+            this.logAccess();
+        }
+    }
 
-	private checkAccess(): boolean {
-		// EN: Some real checks should go here.
-		console.log("Proxy: Checking access prior to firing a real request.");
+    private checkAccess(): boolean {
+        // EN: Some real checks should go here.
+        console.log("Proxy: Checking access prior to firing a real request.");
 
-		return true;
-	}
+        return true;
+    }
 
-	private logAccess(): void {
-		console.log("Proxy: Logging the time of request.");
-	}
+    private logAccess(): void {
+        console.log("Proxy: Logging the time of request.");
+    }
 }
 
 /**
@@ -100,11 +100,11 @@ class Proxy implements Subject {
  * your proxy from the real subject's class.
  */
 function clientCode(subject: Subject) {
-	// ...
+    // ...
 
-	subject.request();
+    subject.request();
 
-	// ...
+    // ...
 }
 
 console.log("Client: Executing the client code with a real subject:");
@@ -117,4 +117,4 @@ console.log("Client: Executing the same client code with a proxy:");
 const proxy = new Proxy(realSubject);
 clientCode(proxy);
 
-process.exit()
+process.exit();

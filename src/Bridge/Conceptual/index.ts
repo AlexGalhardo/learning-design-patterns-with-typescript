@@ -18,16 +18,16 @@
  * Implementation hierarchy and delegates all of the real work to this object.
  */
 class Abstraction {
-	protected implementation: Implementation;
+    protected implementation: Implementation;
 
-	constructor(implementation: Implementation) {
-		this.implementation = implementation;
-	}
+    constructor(implementation: Implementation) {
+        this.implementation = implementation;
+    }
 
-	public operation(): string {
-		const result = this.implementation.operationImplementation();
-		return `Abstraction: Base operation with:\n${result}`;
-	}
+    public operation(): string {
+        const result = this.implementation.operationImplementation();
+        return `Abstraction: Base operation with:\n${result}`;
+    }
 }
 
 /**
@@ -35,10 +35,10 @@ class Abstraction {
  * classes.
  */
 class ExtendedAbstraction extends Abstraction {
-	public operation(): string {
-		const result = this.implementation.operationImplementation();
-		return `ExtendedAbstraction: Extended operation with:\n${result}`;
-	}
+    public operation(): string {
+        const result = this.implementation.operationImplementation();
+        return `ExtendedAbstraction: Extended operation with:\n${result}`;
+    }
 }
 
 /**
@@ -49,7 +49,7 @@ class ExtendedAbstraction extends Abstraction {
  * level operations based on those primitives.
  */
 interface Implementation {
-	operationImplementation(): string;
+    operationImplementation(): string;
 }
 
 /**
@@ -57,15 +57,15 @@ interface Implementation {
  * implements the Implementation interface using that platform's API.
  */
 class ConcreteImplementationA implements Implementation {
-	public operationImplementation(): string {
-		return "ConcreteImplementationA: Here's the result on the platform A.";
-	}
+    public operationImplementation(): string {
+        return "ConcreteImplementationA: Here's the result on the platform A.";
+    }
 }
 
 class ConcreteImplementationB implements Implementation {
-	public operationImplementation(): string {
-		return "ConcreteImplementationB: Here's the result on the platform B.";
-	}
+    public operationImplementation(): string {
+        return "ConcreteImplementationB: Here's the result on the platform B.";
+    }
 }
 
 /**
@@ -75,11 +75,11 @@ class ConcreteImplementationB implements Implementation {
  * abstraction-implementation combination.
  */
 function clientCode(abstraction: Abstraction) {
-	// ..
+    // ..
 
-	console.log(abstraction.operation());
+    console.log(abstraction.operation());
 
-	// ..
+    // ..
 }
 
 /**
