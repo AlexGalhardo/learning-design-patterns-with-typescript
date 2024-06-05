@@ -8,6 +8,16 @@
 - **The original source code: <https://github.com/RefactoringGuru/design-patterns-typescript>**
 - I improved this code repository for my personal studies.
 
+## Resume Design Patterns
+- Asking ChatGPT:
+   - **"Explain to me in the simplest way possible, as if I were a 10-year-old child, what is Design Patterns in object-oriented programming."**
+
+- Imagine you're building with LEGO bricks. Sometimes, you need to build the same things over and over, like houses, cars, or robots. Instead of figuring out how to build them from scratch every single time, you can follow a set of instructions or patterns that tell you exactly how to build those things quickly and correctly.
+
+- In programming, we do something similar. When we write code to create programs, we often run into the same problems and need to solve them in the best way possible. Design patterns are like the LEGO instructions but for solving these common problems in programming. They are tried-and-true solutions that help us write better, cleaner, and easier-to-understand code.
+
+- So, just like you can use instructions to build LEGO sets efficiently, programmers use design patterns to build software efficiently!
+
 ## Run Examples
 
 1. Install Bun: <https://bun.sh/docs/installation>
