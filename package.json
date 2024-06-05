@@ -1,0 +1,17 @@
+{
+  "name": "learning-design-patterns-with-typescript",
+  "scripts": {
+    "singleton": "bun --watch src/Singleton/Conceptual/index.ts",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.3",
+    "@types/node": "^20.14.2",
+    "bun-types": "latest",
+    "typescript": "^5.4.5"
+  }
+}
