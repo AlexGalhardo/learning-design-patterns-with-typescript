@@ -14,12 +14,12 @@
 
 2. Clone repository
 ```bash
-git clone https://github.com/AlexGalhardo/todo-api-clean-architecture.alexgalhardo.com
+git clone git@github.com:AlexGalhardo/learning-design-patterns-with-typescript.git
 ```
 
 3. Enter repository
 ```bash
-cd todo-api-clean-architecture.alexgalhardo.com/
+cd learning-design-patterns-with-typescript/
 ```
 
 Singleton
